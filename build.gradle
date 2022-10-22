@@ -1,0 +1,68 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.20'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group = 'sharppvp.plugins'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        name = "spigot"
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    }
+    maven {
+        name = "sonatype"
+        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+    }
+
+    maven { url = uri("https://jitpack.io") }
+
+    maven { url = uri("https://repo.dmulloy2.net/repository/public/") }
+}
+
+dependencies {
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    // https://mavenlibs.com/maven/dependency/com.github.azbh111/craftbukkit-1.7.10
+    implementation("com.github.azbh111:craftbukkit-1.7.10:R")
+
+    compileOnly("org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT")
+
+    compileOnly("net.luckperms:api:5.4")
+
+    compileOnly (group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.8.0")
+
+    implementation("fr.mrmicky:fastboard:1.2.1")
+
+    implementation("com.github.azbh111:craftbukkit-1.7.10:R")
+
+    // https://mavenlibs.com/maven/dependency/com.github.shynixn.blockball/blockball-bukkit-nms-109R1
+    implementation("com.github.shynixn.blockball:blockball-bukkit-nms-109R1:6.10.0")
+
+    implementation("com.github.ConnorLinfoot:TitleAPI:1.8.1")
+
+}
+
+shadowJar {
+    // Replace 'com.yourpackage' with the package of your plugin
+    relocate("fr.mrmicky.fastboard", "sharppvp.plugins.fastboard")
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+import org.apache.tools.ant.filters.ReplaceTokens
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}

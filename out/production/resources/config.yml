@@ -1,0 +1,97 @@
+#+---------------------------------------------------------------+
+#|                          SS - X                               |
+#+---------------------------------------------------------------+
+#               +--------------------------+
+#               |  Created by SpreestDev   |
+#               +--------------------------+
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+#                   +----------------------+
+#                   |  Permission Options  |
+#                   +----------------------+
+permissions:
+    start-ss: ssx.start-ss
+    join-ss: ssx.join-ss
+    admin-ss: ssx.admin-ss
+
+permission-give-command: on
+only-op: true
+
+blocked-players: ["N/A"]
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+#                   +-------------------------+
+#                   |  Scoreboard ss options  |
+#                   +-------------------------+
+# &0 is for a empty line NULL is for a blank line
+
+title: "&8 << {CP}SSX&8 >>" # {CP} stands for color prefix
+line-10: "{CP}Staffer: {staffer}" # Line 1
+line-9: "&0" # Line 2
+line-8: "&cSospettato: {suspect}" # Line 3
+line-7: "NULL" # Line 4
+line-6: "NULL" # Line 5
+line-5: "NULL" # Line 6
+line-4: "NULL" # Line 7
+line-3: "NULL" # Line 8
+line-2: "NULL" # Line 9
+line-1: "NULL" # Line 10
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+# This is the debug         +---------+
+# category, for dev         |  Debug  |
+# things                    +---------+
+
+debug: off
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+#                   +--------------------+
+#                   |     SS Options     |
+#                   +--------------------+
+
+target-leave-ban: true
+target-ban-time: 14 #It's in days
+
+can-join-ss: true
+op-immunity: on
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+#                   +--------------------+
+#                   | Plugin Decorations |
+#                   +--------------------+
+
+prefix: "&8>> &bSSX &8>>&f "
+color-prefix: "&b"
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+#                   +--------------------+
+#                   | Luck perms options |
+#                   +--------------------+
+
+luck-perms: off # Turn on for permissions
+ss-groups-allowed: ["default"] # <- Deprecated for compatibility
+                               #    Use instead permissions options
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+#                       +-------------+
+#                       | SS location |
+#                       +-------------+
+
+ss-location: null # Deprecated for compatibility, now using database
+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+#                      +------------------+
+#                      | Database options |
+#                      +------------------+
+# Everything below this line is required by the database implementation
+host: "sql2.revivenode.com:3306"
+name: "s16337_SharpDataBase"
+user: "u16337_KJdTUgOa1S"
+password: "pvfO4c2eg+BL!I9dsIj4NYq^"
