@@ -1,0 +1,32 @@
+name: SS-X
+version: '2.0-RELEASE'
+main: sharppvp.plugins.plugin.SSX
+authors: [SpreestDev]
+commands:
+    test:
+        usage: /<command>
+    hide:
+        usage: /<command>
+    ssx:
+        usage: /<command>
+        permission: ssx.start-ss
+    freeze:
+        usage: /<command>
+
+permissions:
+    ssx.start-ss:
+        description: Allows to start a SS
+        default: op
+    ssx.*:
+        description: Gives every command to you
+        default: op
+    ssx.join-ss:
+        description: Allows to join a SS
+        default: op
+    ssx.admin-ss:
+        description: Gives you ss admin
+        default: op
+
+
+
+

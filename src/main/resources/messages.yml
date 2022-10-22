@@ -1,0 +1,78 @@
+#|--------------------------|
+#|         MESSAGES         |
+#|--------------------------|
+test-message: testKotlin
+test-message-boolean: true
+test-message-string: "casual"
+test-message-int: 123
+#|--------------------------|
+targetSS-leaves: "%prefix%è stato bannato dal server perché è uscito da un controllo hack!"
+targetSS-ban-message: "%prefix%&cSei sloggato durante un Controllo Hack"
+targetSS-join: "%prefix%%color-prefix% %player%&f ha provato ad entrare nel server! Ma è bannato!"
+#|--------------------------|
+# %player% -> The player that sent this message.
+# %prefix% -> The prefix of the plugin
+# %command% -> The command that was sent
+# %color-prefix% -> The color prefix of the plugin
+# %target% -> The target of the command
+# %message% -> The message that was sent.
+# {timer} -> Generates a timer NOTE: ONLY WORKS WITH SCOREBOARD
+#|--------------------------|
+
+# | COMMAND |
+lack-of-permission: "%prefix%&fNon hai il permesso per eseguire questo comando"
+user-blocked: "%prefix%&fNon puoi utilizzare questo commando, perché sei nella lista dei bloccati, pensi che sia un errore?"
+
+list-title: "Lista dei comandi:"
+list-divisor: "&8-------------------------------------------------"
+
+command-1:
+    name: "%color-prefix%/ssx&f start"
+    description: "Clicca per %color-prefix%incominciare&f un SS"
+    command: "/ssx start" # Don't touch
+command-2:
+    name: "%color-prefix%/ssx&f finish"
+    description: "Clicca per %color-prefix%finire&f SS"
+    command: "/ssx finish" # Don't touch
+command-3:
+    name: "%color-prefix%/ssx&f join"
+    description: "Clicca per %color-prefix%entrare&f in un SS"
+    command: "/ssx join" # Don't touch
+command-4:
+    name: "%color-prefix%/ssx&f quit"
+    description: "Clicca per %color-prefix%uscire&f dall SS"
+    command: "/ssx quit" # Don't touch
+command-5:
+    name: "%color-prefix%/ssx&f list"
+    description: "Clicca per %color-prefix%vedere&f le SS attive"
+    command: "/ssx list" # Don't touch
+
+list-footer: "&8-------------------------------------------------"
+
+
+# | JOIN |
+join-already-in-SS: "%prefix%&fStai facendo già un SS!"
+join-successfully: "%prefix%&fSei entrato con successo nel SS di %color-prefix%%player%"
+join-staffer-notification: "%prefix% &f lo staffer %color-prefix%%player% &fè entrato nell SS"
+join-failed: "%prefix%&fC'è stato un errore durante l'operazione"
+
+# | QUIT |
+quit-already-in-SS: "%prefix%&fNon puoi uscire dal tuo SS, prima devi finirlo."
+quit-success: "%prefix%&fSei uscito dall SS"
+quit-staffer-notification: "%prefix%%color-prefix%%player%&f è uscito dal SS"
+quit-failed: "%prefix%&fC'è stato un errore durante l'operazione"
+
+# | START |
+title-header: "&c&lATTENZIONE!"
+title-footer: "&eSei stato scelto per un controllo hack, non uscire!"
+
+start-notification: "%prefix%%color-prefix% %player%&f ha iniziato un SS su %target%"
+start-no-location: "%prefix%&cPosizione dell SS non è stata assegnata"
+
+# | SS CHAT |
+chat-format:
+    staffer: "&8[ %color-prefix%&lSS &8]%color-prefix%%player% &8»&f %message%"
+    normal: "&8[ %color-prefix%&lSS &8]&f%player% &8»&f %message%"
+
+
+
